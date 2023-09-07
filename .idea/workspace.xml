@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27b32c15-721f-45f1-a3aa-358ecc56d5f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/src/main/java/HomeWork2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/src/main/java/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Park.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/java/HomeWork2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/target/classes/HomeWork2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lesson__2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lesson__3&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Aston_aqa_course&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -57,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Park">
     <configuration name="HomeWork2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HomeWork2" />
       <module name="Lesson_2" />
@@ -65,8 +69,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Lesson_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Lesson_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Park" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Park" />
+      <module name="Lesson_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="manw2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="manw2" />
+      <module name="Lesson_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Park" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.manw2" />
         <item itemvalue="Application.HomeWork2" />
       </list>
     </recent_temporary>
