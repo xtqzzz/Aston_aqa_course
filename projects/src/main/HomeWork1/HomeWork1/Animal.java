@@ -1,3 +1,5 @@
+package HomeWork1;
+
 public class Animal {
     protected String name;
     protected int maxRunDistance;
@@ -23,7 +25,7 @@ public class Animal {
     public void swim(int distance) {
         if (distance <= maxSwimDistance) {
             System.out.println(name + " проплыл " + distance + " м.");
-        } else { // Иначе
+        } else {
             System.out.println(name + " не может проплыть " + distance + " м.");
         }
     }

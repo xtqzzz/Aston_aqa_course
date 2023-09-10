@@ -1,11 +1,13 @@
+package HomeWork1;
+
 public class Main {
     public static void main(String[] args) {
         Animal[] animals = {
-                new Dogs("Бобик"),
                 new Dogs("Шарик"),
-                new Cat("Мурзик"),
-                new Cat("Барсик"),
-                new Cat("Рыжик")
+                new Dogs("Рэкс"),
+                new Cat("Топа"),
+                new Cat("Стёпа"),
+                new Cat("Барсик")
         };
 
         Plate plate = new Plate(100);

@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27b32c15-721f-45f1-a3aa-358ecc56d5f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/src/main/java/Park.java" afterDir="false" />
+    <list default="true" id="27b32c15-721f-45f1-a3aa-358ecc56d5f7" name="Changes" comment="добавил .idea в .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/src/main/java/HomeWork2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/target/classes/HomeWork2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Dogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Dogs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Plate.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork1/Plate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/main/HomeWork1/HomeWork2/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/target/classes/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/target/classes/Park$info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/target/classes/Park.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +31,28 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xtqzzz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="32e130cf-34ad-4034-ade1-872aa2b68d15" />
+        <option name="url" value="https://github.com/xtqzzz/Aston_aqa_course.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,19 +68,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lesson__3&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Aston_aqa_course&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Lesson__5",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "last_opened_file_path": "D:/Aston_aqa_course",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Aston_aqa_course" />
     </key>
@@ -61,23 +96,36 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Park">
-    <configuration name="HomeWork2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HomeWork2" />
+  <component name="RunManager" selected="Application.HomeWork2.Main">
+    <configuration name="Animal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Animal" />
       <module name="Lesson_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="HomeWork2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HomeWork2.Main" />
+      <module name="Lesson_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HomeWork2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HomeWork1.Main" />
       <module name="Lesson_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork1.Main" />
       <module name="Lesson_2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,8 +138,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="manw2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="manw2" />
+    <configuration name="Person" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Person" />
       <module name="Lesson_2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Park" />
+        <item itemvalue="Application.HomeWork2.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.manw2" />
-        <item itemvalue="Application.HomeWork2" />
+        <item itemvalue="Application.Person" />
+        <item itemvalue="Application.Park" />
       </list>
     </recent_temporary>
   </component>
@@ -116,6 +164,15 @@
       <option name="presentableId" value="Default" />
       <updated>1693045755479</updated>
     </task>
+    <task id="LOCAL-00001" summary="добавил .idea в .gitignore">
+      <option name="closed" value="true" />
+      <created>1694167767256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167767256</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,5 +185,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="добавил .idea в .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил .idea в .gitignore" />
   </component>
 </project>

@@ -1,3 +1,5 @@
+package HomeWork1;
+
 public class Plate {
     private int food;
 
