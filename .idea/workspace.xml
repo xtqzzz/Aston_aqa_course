@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27b32c15-721f-45f1-a3aa-358ecc56d5f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/projects/src/HomeWork1/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/HomeWork1/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/src/HomeWork2/Park.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/src/HomeWork1/AppData.java" beforeDir="false" afterPath="$PROJECT_DIR$/projects/src/HomeWork1/AppData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +57,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppData">
+  <component name="RunManager" selected="Application.HomeWork1.Main">
     <configuration name="AppData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HomeWork1.AppData" />
+      <module name="Aston_aqa_course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HomeWork1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeWork1.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HomeWork1.Main" />
       <module name="Aston_aqa_course" />
       <extension name="coverage">
         <pattern>
@@ -97,13 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Lesson_2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Park" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Park" />
       <module name="Lesson_2" />
@@ -113,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HomeWork1.Main" />
         <item itemvalue="Application.AppData" />
         <item itemvalue="Application.HomeWork2" />
         <item itemvalue="Application.HomeWork2.Main" />
         <item itemvalue="Application.Park" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
