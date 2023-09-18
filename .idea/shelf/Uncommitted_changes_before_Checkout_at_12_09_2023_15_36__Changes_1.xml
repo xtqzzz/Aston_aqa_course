@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1" date="1694522202668" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 12.09.2023 15:36 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="projects/target/classes/Park.class" />
+    <option name="AFTER_PATH" value="projects/src/Park.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1/Park.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="projects/target/classes/Employee.class" />
+    <option name="AFTER_PATH" value="projects/src/Employee.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1/Employee.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="projects/target/classes/Park$info.class" />
+    <option name="AFTER_PATH" value="projects/src/Park$info.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1/Park$info.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="projects/target/classes/Main.class" />
+    <option name="AFTER_PATH" value="projects/src/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_09_2023_15_36_[Changes]1/Main.class" />
+  </binary>
+</changelist>
