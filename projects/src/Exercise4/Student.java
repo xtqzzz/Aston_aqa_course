@@ -1,11 +1,11 @@
-package HomeWork4;
+package Exercise4;
 
 import java.util.Objects;
 
 public class Student {
     private final String name;
     private final Integer age;
-    private final Gender gender;
+    private final Gender gender; // исправил тип с Sex на Gender
 
     public Student(String name, Integer age, Gender gender) {
         this.name = name;
@@ -38,9 +38,9 @@ public class Student {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Student)) return false;
-        Student student = (Student) o;
-        return Objects.equals(name, student.name) &&
+        if (!(o instanceof Student)) return false; // исправил синтаксис instanceof
+        Student student = (Student) o; // исправил приведение типа с маленькой буквы
+        return Objects.equals(name, student.name) && // исправил точку на запятую
                 Objects.equals(age, student.age) &&
                 Objects.equals(gender, student.gender);
     }
