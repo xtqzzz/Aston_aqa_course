@@ -6,9 +6,12 @@ import static org.aston.Factorial.getFactorial;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertThrows;
+
 public class FactorialTest {
 
-    // метод для проверки факториала положительного числа
     @Test
     public void testFactorialPositive() {
         int n = 5;
@@ -17,7 +20,6 @@ public class FactorialTest {
         assertEquals(expected, actual);
     }
 
-    // метод для проверки факториала нуля
     @Test
     public void testFactorialZero() {
         int n = 0;
@@ -26,10 +28,8 @@ public class FactorialTest {
         assertEquals(expected, actual);
     }
 
-    // метод для проверки факториала отрицательного числа
     @Test
     public void testFactorialNegative() {
         int n = -3;
-        assertThrows(IllegalArgumentException.class, () -> getFactorial(n)); // проверка исключения
+        assertThrows(IllegalArgumentException.class, () -> getFactorial(n));
     }
-}
