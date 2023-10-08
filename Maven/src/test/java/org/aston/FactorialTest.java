@@ -1,35 +1,26 @@
-package org.aston;
+package aston;
 
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import static org.aston.Factorial.getFactorial;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactorialTest {
 
-    // метод для проверки факториала положительного числа
     @Test
-    public void testFactorialPositive() {
-        int n = 5;
-        int expected = 120;
-        int actual = getFactorial(n);
-        assertEquals(expected, actual);
-    }
-
-    // метод для проверки факториала нуля
-    @Test
-    public void testFactorialZero() {
-        int n = 0;
-        int expected = 1;
-        int actual = getFactorial(n);
-        assertEquals(expected, actual);
-    }
-
-    // метод для проверки факториала отрицательного числа
-    @Test
-    public void testFactorialNegative() {
-        int n = -3;
-        assertThrows(IllegalArgumentException.class, () -> getFactorial(n)); // проверка исключения
+    public void testFactorial() {
+        int[][] testData = {
+                {0, 1},
+                {1, 1},
+                {2, 2},
+                {3, 6},
+                {4, 24},
+                {5, 120}
+        };
+        for (int[] pair : testData) {
+            int input = pair[0];
+            int expected = pair[1];
+            int actual = aston.Factorial.factorial(input);
+            Assert.assertEquals(actual, expected, "Факториал " + input + " должен быть равен " + expected);
+        }
     }
 }

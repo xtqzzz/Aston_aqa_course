@@ -1,16 +1,18 @@
-package org.aston;
+package aston;
 
-public class Factorial
-{
-    public static void main( String[] args ) {
-        System.out.println(getFactorial(0));
+public class Factorial {
+
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        else {
+            return n * factorial(n - 1);
+        }
     }
 
-    public static int getFactorial(int n) {
-        int result = 1;
-        for (int i = 1; i <= n; i++) {
-            result = result * i;
-        }
-        return result;
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("Факториал " + n + " равен " + factorial(n));
     }
 }
