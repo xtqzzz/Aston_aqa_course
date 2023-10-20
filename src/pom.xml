@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>Lesson_13</artifactId>
+  <artifactId>Lesson_14</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Lesson_13</name>
+  <name>Lesson_14</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -25,18 +25,13 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.13.0</version>
+      <version>4.14.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
-      <version>4.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-support</artifactId>
-      <version>4.13.0</version>
+      <version>4.14.0</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -44,7 +39,12 @@
       <version>RELEASE</version>
       <scope>compile</scope>
     </dependency>
-
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>compile</scope>
+    </dependency>
 
   </dependencies>
   <build>

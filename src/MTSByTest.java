@@ -1,4 +1,4 @@
-package org.example;
+package test;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
