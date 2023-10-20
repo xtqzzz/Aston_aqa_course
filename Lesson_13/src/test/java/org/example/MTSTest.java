@@ -15,6 +15,7 @@ public class MTSTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    driver().manager().window()
 
     @BeforeEach
     public void setUp() {
@@ -30,7 +31,7 @@ public class MTSTest {
 
     @Test // тест проверки названия блока
     public void testBlockTitle() {
-        String blockTitle = driver.findElement(By.xpath("//section[@class='pay']/div/h2")).getText();
+        String blockTitle = driver.findElement(By.xpath(".pay__wrapper h2")).getText();
         Assertions.assertEquals("Онлайн пополнение\nбез комиссии", blockTitle);
         System.out.println(blockTitle);
     }
@@ -38,7 +39,7 @@ public class MTSTest {
     @Test // тест на иконки
     public void testPaymentSystemsLogos() {
         List<String> listOfPayments = new ArrayList<>();
-        List<WebElement> listOfElements = driver.findElements(By.xpath("//div[@class = 'pay__partners']/ul/li/img"));
+        List<WebElement> listOfElements = driver.findElements(By.xpath("div .pay__partners ul li"));
         for (int i=0; i<listOfElements.size(); i++){
             listOfPayments.add(listOfElements.get(i).getAttribute("alt"));
         }
@@ -51,7 +52,6 @@ public class MTSTest {
     public void testMoreInfoLink() throws InterruptedException {
         WebElement link = driver.findElement(By.xpath("//a[text()='Подробнее о сервисе']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", link);
-        Thread.sleep(500);
         link.click();
         String newTabUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/", newTabUrl);
@@ -61,14 +61,13 @@ public class MTSTest {
     public void testContinueButton() throws InterruptedException {
         WebElement dropdown = driver.findElement(By.xpath("//button[@class='select__header']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
-        Thread.sleep(500);
         dropdown.click();
         WebElement communicationServices = driver.findElement(By.xpath("//p[@class='select__option'][1]"));
         communicationServices.click();
         WebElement phoneField = driver.findElement(By.xpath("//input[@id='connection-phone']"));
         phoneField.click();
         phoneField.sendKeys("297777777");
-        WebElement continueButton = driver.findElement(By.xpath("//form[@id = 'pay-connection']//button[text() = \"Продолжить\"]"));
+        WebElement continueButton = driver.findElement(By.xpath("#pay-connection button"]"));
         continueButton.click();
 
 
