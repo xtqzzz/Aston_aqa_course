@@ -9,9 +9,6 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.http.HttpStatus;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.core.IsNull.notNullValue;
-
 public class Specifications {
     public static RequestSpecification requestSpec(String url) {
         return new RequestSpecBuilder()
@@ -24,6 +21,13 @@ public class Specifications {
         return new ResponseSpecBuilder()
                 .log(LogDetail.ALL)
                 .expectStatusCode(HttpStatus.SC_OK)
+                .build();
+    }
+
+    public static ResponseSpecification responseSpec400fail() {
+        return new ResponseSpecBuilder()
+                .log(LogDetail.ALL)
+                .expectStatusCode(HttpStatus.SC_BAD_REQUEST)
                 .build();
     }
     public static void installSpecification(RequestSpecification request, ResponseSpecification response) {

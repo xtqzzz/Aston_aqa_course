@@ -1,6 +1,7 @@
-import EchoPostman.EchoPostReq;
-import EchoPostman.EchoPostResp;
+import Aston_AQA.EchoPostman.EchoPostReq;
+import Aston_AQA.EchoPostman.EchoPostResp;
 import Spec.Specifications;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,10 @@ public class RestTest {
     @BeforeEach
     void setup() {
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200ok());
+    }
+    @AfterEach
+    void tearDown() {
+        System.out.println("--------------------------------------------");
     }
     @Test
     void echoGetTest() {

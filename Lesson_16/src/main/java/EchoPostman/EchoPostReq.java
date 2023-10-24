@@ -1,14 +1,13 @@
-package EchoPostman;
+package Aston_AQA.EchoPostman;
 
-public class EchoPostResp {
+public class EchoPostReq {
     private String foo1;
     private String foo2;
 
-    public EchoPostResp(String foo1, String foo2) {
+    public EchoPostReq(String foo1, String foo2) {
         this.foo1 = foo1;
         this.foo2 = foo2;
     }
-    public EchoPostResp() {}
 
     public String getFoo1() {
         return foo1;
