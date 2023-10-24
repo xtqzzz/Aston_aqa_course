@@ -1,6 +1,5 @@
-package org.example;
+package Aston_AQA;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,8 +25,8 @@ public class WildberriesHomePage extends WildberriesElements {
 
 
     public WildberriesProductPage selectProduct(int itemNum) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1000)");
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("window.scrollBy(0,1000)");
         visibilityOfElement(driver, products.get(itemNum)).click();
         return new WildberriesProductPage(driver);
     }

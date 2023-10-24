@@ -1,5 +1,7 @@
-package org.example;
-
+import Aston_AQA.WildberriesBasketPage;
+import Aston_AQA.WildberriesElements;
+import Aston_AQA.WildberriesHomePage;
+import Aston_AQA.WildberriesProductPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -24,11 +26,11 @@ public class WildberriesTest {
         driver.get("https://www.wildberries.by/");
     }
 
-    @BeforeEach
-    void setWait() {
-
-        driver.manage().timeouts().scriptTimeout(Duration.ofMillis(5000));
-    }
+//    @BeforeEach
+//    void setWait() {
+//
+//        driver.manage().timeouts().scriptTimeout(Duration.ofMillis(5000));
+//    }
 
     @AfterEach
     void setClean() {
@@ -41,8 +43,8 @@ public class WildberriesTest {
 
     @Test
     void smokeTest() {
-        String firstProd = "Java руководство для начинающих Герберг Шилдт";
-        String secondProd = "Изучаем Java";
+        String firstProd = "PlayStation 5 1200A (Япония), 3-я ревизия, с дисководом";
+        String secondProd = "Геймпад для PS5 DualSense Black";
 
         homePage.searchProduct(firstProd).clickSearchBtn().selectProduct(0).addToBasket()
                 .clickQuantityBtn().backToHome()

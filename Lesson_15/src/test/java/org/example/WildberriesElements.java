@@ -1,4 +1,4 @@
-package org.example;
+package Aston_AQA;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,12 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 import java.util.Map;
 
 public abstract class WildberriesElements {
     @FindBy(xpath = "//*[@class='svg-icon icon-cart-thin']")
     public WebElement basketBtn;
-    @FindBy(xpath = "//*[@class='svg-icon icon-wb-header-logo-holiday']")
+    @FindBy(xpath = "//*[contains(@class, 'icon-wb-header')]")
     public WebElement homePageBtn;
     @FindBy(xpath = "//*[@class='search-component-input']")
     public WebElement searchField;
@@ -38,6 +39,11 @@ public abstract class WildberriesElements {
         return new WebDriverWait(driver, Duration.ofMillis(5000))
                 .until(ExpectedConditions.visibilityOf(element));
     }
+    public static List<WebElement> visibilityOfElements(WebDriver driver, List<WebElement> elements) {
+        return new WebDriverWait(driver, Duration.ofMillis(5000))
+                .until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
+
     public static WebElement elementToBeClickable(WebDriver driver, WebElement element) {
         return new WebDriverWait(driver, Duration.ofMillis(5000))
                 .until(ExpectedConditions.elementToBeClickable(element));

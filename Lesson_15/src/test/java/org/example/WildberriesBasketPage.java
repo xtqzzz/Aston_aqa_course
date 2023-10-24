@@ -1,4 +1,4 @@
-package org.example;
+package Aston_AQA;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,9 +24,9 @@ public class WildberriesBasketPage extends WildberriesElements {
     @FindBy (xpath = "//*[@class='quantity__input']")
     private static List<WebElement> productCounters;
     @FindBy (xpath = "//*[@class='b-item-price__lower']")
-    private List<WebElement> productPrises;
+    private static List<WebElement> productPrises;
     @FindBy (xpath = "//*[@data-tag='itemName']")
-    private List<WebElement> productNames;
+    private static List<WebElement> productNames;
     private static String totalShopping;
     public WildberriesBasketPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -57,8 +57,11 @@ public class WildberriesBasketPage extends WildberriesElements {
         return totalShopping;
     }
     public WildberriesBasketPage getProductInform() {
+
         Map<String, String> prodInfo = IntStream.range(0, productNames.size()).boxed()
-                .collect(Collectors.toMap(i -> productNames.get(i).getText(), i -> productPrises.get(i).getText()));
+                .collect(Collectors.toMap(
+                        i -> visibilityOfElement(driver, productNames.get(i)).getDomProperty("textContent"),
+                        i -> visibilityOfElement(driver, productPrises.get(i)).getDomProperty("textContent")));
         setProductInfo(prodInfo);
         return this;
     }
