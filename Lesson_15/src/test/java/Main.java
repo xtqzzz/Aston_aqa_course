@@ -1,5 +1,3 @@
-package Aston_AQA;
-
 public class Main {
     public static void main(String[] args) {
         String d = "3268,41р.";

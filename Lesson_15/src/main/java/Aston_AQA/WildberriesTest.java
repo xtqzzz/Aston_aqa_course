@@ -1,7 +1,5 @@
-import Aston_AQA.WildberriesBasketPage;
-import Aston_AQA.WildberriesElements;
-import Aston_AQA.WildberriesHomePage;
-import Aston_AQA.WildberriesProductPage;
+package Aston_AQA;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -54,7 +52,7 @@ public class WildberriesTest {
                 .getProductInform();
         WildberriesElements.getProductInfo().forEach((k, v) -> System.out.println(k + " | " + v));
 
-        String expectedPrice = String.format("%.2fр.",WildberriesElements.getTotalPriceFromInfo());
+        String expectedPrice = String.format("%.2fр.", WildberriesElements.getTotalPriceFromInfo());
         System.out.println(expectedPrice);
         System.out.println("---------");
 
