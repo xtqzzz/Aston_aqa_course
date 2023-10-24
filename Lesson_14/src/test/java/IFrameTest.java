@@ -1,5 +1,3 @@
-package org.example;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
@@ -16,12 +14,35 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MTSByTest {
+public class IFrameTest {
     private static WebDriver driver;
     private static WebDriver iFrame;
     private static WebDriverWait wait;
     private static Set<Cookie> cookies;
     private static final String XPATH_IFRAME = "//iframe[@class='bepaid-iframe']";
+
+    private String labelWithText(String text) {
+        return "//label[text()=".concat("'").concat(text).concat("'").concat("]");
+    }
+
+    private String buttonWithText(String text) {
+        return "//button[text()=".concat("'").concat(text).concat("'").concat("]");
+    }
+
+    private WebElement elementWithXpath(WebDriver driver, String text) {
+        return driver.findElement(By.xpath(text));
+    }
+
+    private WebElement waitUntilBecomeVisible(WebDriver driver, String selector) {
+        return new WebDriverWait(driver, Duration.ofMillis(10000))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(selector)));
+    }
+
+    private List<WebElement> waitUntilBecomeVisibleAll(WebDriver driver, String selector) {
+        return new WebDriverWait(driver, Duration.ofMillis(10000))
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(selector)));
+    }
+
 
     @BeforeAll
     static void setup() {
@@ -52,28 +73,6 @@ public class MTSByTest {
     static void teardown() {
         cookies.stream().forEach(c -> driver.manage().deleteCookie(c));
         driver.quit();
-    }
-
-    private String labelWithText(String text) {
-        return "//label[text()=".concat("'").concat(text).concat("'").concat("]");
-    }
-
-    private String buttonWithText(String text) {
-        return "//button[text()=".concat("'").concat(text).concat("'").concat("]");
-    }
-
-    private WebElement elementWithXpath(WebDriver driver, String text) {
-        return driver.findElement(By.xpath(text));
-    }
-
-    private WebElement waitUntilBecomeVisible(WebDriver driver, String selector) {
-        return new WebDriverWait(driver, Duration.ofMillis(10000))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(selector)));
-    }
-
-    private List<WebElement> waitUntilBecomeVisibleAll(WebDriver driver, String selector) {
-        return new WebDriverWait(driver, Duration.ofMillis(10000))
-                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(selector)));
     }
 
     @Test

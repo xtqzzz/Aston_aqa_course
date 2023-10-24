@@ -1,5 +1,3 @@
-package org.example;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
@@ -16,7 +14,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class OnlinePayTest {
+public class OnlinePaySysTest {
     private static WebDriver driver;
     private static Set<Cookie> cookies;
     private WebElement selectArrow;
