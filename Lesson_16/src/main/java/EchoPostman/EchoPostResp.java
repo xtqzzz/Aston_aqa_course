@@ -1,4 +1,4 @@
-package Aston_AQA.EchoPostman;
+package EchoPostman;
 
 public class EchoPostResp {
     private String foo1;

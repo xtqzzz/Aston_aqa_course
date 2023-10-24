@@ -1,10 +1,11 @@
-import Aston_AQA.EchoPostman.EchoPostReq;
-import Aston_AQA.EchoPostman.EchoPostResp;
+import EchoPostman.EchoPostResp;
+import EchoPostman.EchoPostReq;
 import Spec.Specifications;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
