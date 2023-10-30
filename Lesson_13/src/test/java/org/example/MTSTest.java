@@ -1,76 +1,93 @@
-import org.junit.jupiter.api.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
+public MTSTest {
+    private static WebDriver driver;
+    private static Set<Cookie> cookies;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-
-public class MTSTest {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
-    driver().manager().window()
-
-    @BeforeEach
-    public void setUp() {
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofMillis(10000));
-        driver.get("https://www.mts.by/");
+    private static WebElement elementWithXpath(WebDriver driver, String text) {
+        return driver.findElement(By.xpath(text));
     }
 
-    @AfterEach
-    public void tearDown() {
+    private static String buttonWithText(String text) {
+        return "//button[text()=".concat("'").concat(text).concat("'").concat("]");
+    }
+
+    private static String formWithId(String text) {
+        return "//form//input[@id=".concat("'").concat(text).concat("'").concat("]");
+    }
+
+    @BeforeAll
+    static void setup() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
+        driver.get("https://www.mts.by/");
+        cookies = driver.manage().getCookies();
+        cookies.stream().forEach(c -> driver.manage().addCookie(c));
+    }
+
+    @AfterAll
+    static void teardown() {
+        cookies.stream().forEach(c-> driver.manage().deleteCookie(c));
         driver.quit();
     }
 
-    @Test // тест проверки названия блока
-    public void testBlockTitle() {
-        String blockTitle = driver.findElement(By.xpath(".pay__wrapper h2")).getText();
-        Assertions.assertEquals("Онлайн пополнение\nбез комиссии", blockTitle);
-        System.out.println(blockTitle);
+    @Test
+    void checkBlockNameTest() {
+        List<WebElement> elements = driver.findElements(By.xpath("//section/div/h2"));
+        String actual = elements.stream().map(WebElement::getText).collect(Collectors.joining());
+        String expected = "Онлайн пополнение\n".concat("без комиссии");
+        Assertions.assertEquals(expected, actual);
     }
 
-    @Test // тест на иконки
-    public void testPaymentSystemsLogos() {
-        List<String> listOfPayments = new ArrayList<>();
-        List<WebElement> listOfElements = driver.findElements(By.xpath("div .pay__partners ul li"));
-        for (int i=0; i<listOfElements.size(); i++){
-            listOfPayments.add(listOfElements.get(i).getAttribute("alt"));
-        }
-        assertThat(listOfPayments).withFailMessage("Платежные партнеры не совпадают")
-                .containsAll(List.of("Visa","Verified By Visa","MasterCard","MasterCard Secure Code",
-                        "Белкарт", "МИР"));
+    @Test
+    void findLogoPaySysTest() {
+        List<WebElement> icons = driver.findElements(By.xpath("//section//ul/li/img"));
+        assertAll(() -> assertTrue(icons.get(0).isDisplayed()),
+                () -> assertTrue(icons.get(1).isDisplayed()),
+                () -> assertTrue(icons.get(2).isDisplayed()),
+                () -> assertTrue(icons.get(3).isDisplayed()),
+                () -> assertTrue(icons.get(4).isDisplayed()),
+                () -> assertTrue(icons.get(5).isDisplayed()));
     }
 
-    @Test // проверка ссылки
-    public void testMoreInfoLink() throws InterruptedException {
-        WebElement link = driver.findElement(By.xpath("//a[text()='Подробнее о сервисе']"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", link);
-        link.click();
-        String newTabUrl = driver.getCurrentUrl();
-        Assertions.assertEquals("https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/", newTabUrl);
+    @Test
+    void serviceDetailsLincTest() {
+        WebElement aboutService = driver.findElement(By.xpath("//section[@class = 'pay']//a"));
+        aboutService.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
+        String title = driver.getTitle();
+        String expected = "Порядок оплаты и безопасность интернет платежей";
+        Assertions.assertEquals(expected, title);
+        WebElement mainPage = elementWithXpath(driver, "//span[text()='Главная']");
+        mainPage.click();
     }
 
-    @Test //
-    public void testContinueButton() throws InterruptedException {
-        WebElement dropdown = driver.findElement(By.xpath("//button[@class='select__header']"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
-        dropdown.click();
-        WebElement communicationServices = driver.findElement(By.xpath("//p[@class='select__option'][1]"));
-        communicationServices.click();
-        WebElement phoneField = driver.findElement(By.xpath("//input[@id='connection-phone']"));
-        phoneField.click();
-        phoneField.sendKeys("297777777");
-        WebElement continueButton = driver.findElement(By.xpath("#pay-connection button"]"));
-        continueButton.click();
-
-
+    @Test
+    void continueButtonTest() {
+        WebElement phone = elementWithXpath(driver, formWithId("connection-phone"));
+        WebElement amount = elementWithXpath(driver, formWithId("connection-sum"));
+        WebElement email = elementWithXpath(driver, formWithId("connection-email"));
+        WebElement nextButton = driver.findElement(By.xpath(buttonWithText("Продолжить")));
+        phone.click();
+        phone.sendKeys("297777777");
+        amount.click();
+        amount.sendKeys("99");
+        email.click();
+        email.sendKeys("test@test.by");
+        nextButton.click();
+        WebDriver iFrame = driver.switchTo().frame(
+                driver.findElement(By.xpath("//iframe[@class='bepaid-iframe']")));
+        List<WebElement> elements = new WebDriverWait(iFrame, Duration.ofMillis(5000))
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                        By.xpath("//div[@class='header__payment']/p")));
+        String actual = elements.stream().map(e -> e.getText()).collect(Collectors.joining("\n"));
+        String expected = "99.00 BYN\n".concat("Оплата: Услуги связи Номер:375297777777");
+        assertEquals(expected, actual);
+        WebElement closeButton = elementWithXpath(iFrame, "//app-back-navigation//svg-icon");
+        closeButton.click();
     }
-
 }
